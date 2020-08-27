@@ -1,6 +1,6 @@
 # Data-Viz-ML-DL-with-stock-prices
 
-Here's some script who aim to predict stock price. 
+Here's some scripts who aim to predict stock price. 
 
 In those script you can specify any company you want (if she's in the dataset, they are 501 so you could try some if you want) and after that, just run the script and you'll obtain graph in output to see how well our models perform !
 
