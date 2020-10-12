@@ -21,7 +21,7 @@ Here's some examples :
 
 ## Prediction with GRU (stock_price_gru.py)
 
-![gru_pred](https://user-images.githubusercontent.com/49553009/91452478-e8f33e00-e87e-11ea-9405-cbfc837e902d.png)
+![téléchargement](https://user-images.githubusercontent.com/49553009/95761014-043dcf80-0cac-11eb-9552-5a30cd57d9ad.png)
 
 
 
