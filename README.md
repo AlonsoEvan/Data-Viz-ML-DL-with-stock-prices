@@ -17,7 +17,8 @@ Here's some examples :
 
 ## Prediction with LSTM (stock_price_LSTM.py)
 
-![lstm_pred](https://user-images.githubusercontent.com/49553009/91452488-ebee2e80-e87e-11ea-8983-d46358a3c767.png)
+![lstm](https://user-images.githubusercontent.com/49553009/95762150-9db9b100-0cad-11eb-8265-01b5105ffe71.png)
+
 
 ## Prediction with GRU (stock_price_gru.py)
 
