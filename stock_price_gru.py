@@ -2,14 +2,21 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#import tensorflow as tf
+
+
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
+from math import sqrt
+
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, LSTM, GRU, Bidirectional
 from keras.optimizers import SGD
 
 
 
-
-df = pd.read_csv("data/prices-split-adjusted.csv")
+df = pd.read_csv("prices-split-adjusted.csv")
 
 
 
@@ -47,6 +54,7 @@ y_train = np.array(y_train)
 x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 
 
+
 # The GRU architecture
 regressorGRU = Sequential()
 # First GRU layer with Dropout regularisation
@@ -65,14 +73,15 @@ regressorGRU.add(Dropout(0.2))
 regressorGRU.add(Dense(units=1))
 
 
-regressorGRU.compile(optimizer=SGD(lr=0.01, decay=1e-7, momentum=0.9, nesterov=False), loss='mean_squared_error')
+regressorGRU.compile(optimizer=SGD(lr=0.01, decay=1e-7, momentum=0.9, nesterov=False), loss = 'mean_squared_error', metrics=['mae', 'mape'])
 
 # fitting the model
 
 regressorGRU.fit(x_train, y_train, epochs=5, batch_size=150)
 
 
-test_set = df.loc[df['symbol'] == 'CLX']   # change CBS to whatever company from the list
+
+test_set = df.loc[df['symbol'] == stock]   # change stock to whatever company from the list
 test_set = test_set.loc[:, test_set.columns == price]
 
 y_test = test_set.iloc[timestamp:, 0:].values
@@ -90,10 +99,34 @@ x_test = np.array(x_test)
 x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
 
-y_pred = regressorGRU.predict(x_test)
+
+
+y_pred = model.predict(x_test)
 predicted_price = sc.inverse_transform(y_pred)
 
+fig, ax = plt.subplots(3,1)
+ax[0].plot(history.history['loss'], color='b', label="MSE during epochs")
+legend = ax[0].legend(loc='best', shadow=True)
+
+
+ax[1].plot(history.history['mae'], color='b', label="MAE during epochs")
+legend = ax[1].legend(loc='best', shadow=True)
+
+ax[2].plot(history.history['mape'], color='b', label="MAPE during epochs")
+legend = ax[2].legend(loc='best', shadow=True)
+
+print('')
+print('')
+print('Metrics')
+print(f'R² = {r2_score(y_test, predicted_price)}')
+print(f'MAE = {mean_absolute_error(y_test, predicted_price)}')
+print(f'MSE = {mean_squared_error(y_test, predicted_price)}')
+print(f'RMSE = {sqrt(mean_squared_error(y_test, predicted_price))}')
+print('')
+print('')
+
 # plotting the results
+plt.figure(figsize= (15,10))
 plt.plot(y_test, color = 'blue', label = 'Actual Stock Price')
 plt.plot(predicted_price, color = 'red', label = 'Predicted Stock Price')
 plt.title('Stock Price Prediction')
