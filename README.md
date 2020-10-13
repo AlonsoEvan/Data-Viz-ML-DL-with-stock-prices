@@ -1,4 +1,4 @@
-# Data-Viz-ML-DL-with-stock-prices
+# DataViz|Machine Learning| Deep Learning with stock prices
 
 Here's some scripts who aim to predict stock price. This kind of work is really useful in term of business value. Stock prices are really volatile, hence very hard to predict so it's very appreciated for companies if you know the tricks. Moreover it's a very powerful way to train yourself because like I said previously, stock prices are strongly volatile and it's quite impossible to predict perfectly.
 
