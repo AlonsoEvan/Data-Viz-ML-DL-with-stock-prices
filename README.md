@@ -15,6 +15,16 @@ Here's some examples :
 
 ![stock_price_MA_pred](https://user-images.githubusercontent.com/49553009/91452515-f27ca600-e87e-11ea-86a6-721023350390.png)
 
+**Metrics
+
+> R² = 0.71
+
+> MAE = 3.044
+
+> MSE = 16.16
+
+> RMSE = 4.02
+
 ## Prediction more complexe using AutoARIMAX with Moving Average, relative strength index and datetime feature (stock_price_AUTOARIMAX.py)
 
 ![autoarimax](https://user-images.githubusercontent.com/49553009/95889301-87315980-0d82-11eb-8e86-9c5409bcc69f.png)
@@ -33,10 +43,30 @@ Here's some examples :
 
 ![lstm](https://user-images.githubusercontent.com/49553009/95762150-9db9b100-0cad-11eb-8265-01b5105ffe71.png)
 
+**Metrics**
+
+> R² = 0.99
+
+> MAE = 2.42
+
+> MSE = 9.62
+
+> RMSE = 3.102
+
 
 ## Prediction with GRU (stock_price_gru.py)
 
 ![téléchargement](https://user-images.githubusercontent.com/49553009/95761014-043dcf80-0cac-11eb-9552-5a30cd57d9ad.png)
+
+**Metrics**
+
+> R² = 0.98
+
+> MAE = 2.65
+
+> MSE = 10.51
+
+> RMSE = 3.24
 
 
 
