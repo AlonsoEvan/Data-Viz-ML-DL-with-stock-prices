@@ -11,9 +11,11 @@ Here's some examples :
 
 ![prophet_pred](https://user-images.githubusercontent.com/49553009/91452495-ee508880-e87e-11ea-94c9-c6a419a155f3.png)
 
-## Prediction more complexe with Moving Average and relative strength index (stock_price.py)
+## Prediction more complexe using xgboost with Moving Average, relative strength index and datetime feature (stock_price_xgboost.py)
 
 ![stock_price_MA_pred](https://user-images.githubusercontent.com/49553009/91452515-f27ca600-e87e-11ea-86a6-721023350390.png)
+
+## Prediction more complexe using AutoARIMAX with Moving Average, relative strength index and datetime feature (stock_price_AUTOARIMAX.py)
 
 ## Prediction with LSTM (stock_price_LSTM.py)
 
