@@ -17,6 +17,8 @@ Here's some examples :
 
 ## Prediction more complexe using AutoARIMAX with Moving Average, relative strength index and datetime feature (stock_price_AUTOARIMAX.py)
 
+![autoarimax](https://user-images.githubusercontent.com/49553009/95889301-87315980-0d82-11eb-8e86-9c5409bcc69f.png)
+
 ## Prediction with LSTM (stock_price_LSTM.py)
 
 ![lstm](https://user-images.githubusercontent.com/49553009/95762150-9db9b100-0cad-11eb-8265-01b5105ffe71.png)
