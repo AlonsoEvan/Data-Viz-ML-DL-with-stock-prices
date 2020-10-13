@@ -22,9 +22,12 @@ Here's some examples :
 **Metrics**
 
 > R² = 0.80
-> MAE = 2.609260830939983
-> MSE = 11.168683599573425
-> RMSE = 3.34195804874529
+
+> MAE = 2.61
+
+> MSE = 11.17
+
+> RMSE = 3.34
 
 ## Prediction with LSTM (stock_price_LSTM.py)
 
