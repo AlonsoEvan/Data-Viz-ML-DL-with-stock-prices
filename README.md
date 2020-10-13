@@ -19,11 +19,11 @@ Here's some examples :
 
 ![autoarimax](https://user-images.githubusercontent.com/49553009/95889301-87315980-0d82-11eb-8e86-9c5409bcc69f.png)
 
-Metrics
-R² = 0.80
-MAE = 2.609260830939983
-MSE = 11.168683599573425
-RMSE = 3.34195804874529
+**Metrics**
+> R² = 0.80
+> MAE = 2.609260830939983
+> MSE = 11.168683599573425
+< RMSE = 3.34195804874529
 
 ## Prediction with LSTM (stock_price_LSTM.py)
 
