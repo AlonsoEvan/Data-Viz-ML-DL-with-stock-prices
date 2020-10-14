@@ -81,3 +81,13 @@ I also implemented a script to visualise those stock price in Dash, mcuh easier 
 You just need to specify the name of the company and here you go !
 
 
+## Future Development
+
+- Maybe Increasing the number of timesteps : the model remembered the stock prices from the x previous financial days to predict the stock price of the next day. That’s because we chose a number of x timesteps. 
+
+- Adding some other indicators: Maybe stock price of some other companies might be correlated to the one that is used, we could add this other stock price as a new indicator in the training data.
+- Adding more layers: I build my Neural Network with four layers but I could try with even more. 
+
+- Adding more neurones in the LSTM layers: we highlighted the fact that we needed a high number of neurones in the LSTM layers to respond better to the complexity of the problem and we chose to include 60 neurones in each of our 4 LSTM layers. You could try an architecture with even more neurones in each of the 4 (or more) LSTM layers.
+
+- Getting more training data
