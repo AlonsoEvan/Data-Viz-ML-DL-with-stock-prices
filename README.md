@@ -53,11 +53,11 @@ Here's some examples :
 
 > R² = 0.99
 
-> MAE = 2.42
+> MAE = 1.97
 
-> MSE = 9.62
+> MSE = 6.57
 
-> RMSE = 3.102
+> RMSE = 2.56
 
 
 ## Prediction with GRU (stock_price_gru.py)
@@ -94,6 +94,6 @@ You just need to specify the name of the company and here you go !
 - Adding some other indicators: Maybe stock price of some other companies might be correlated to the one that is used, we could add this other stock price as a new indicator in the training data.
 - Adding more layers: I build my Neural Network with four layers but I could try with even more. 
 
-- Adding more neurones in the LSTM layers: we highlighted the fact that we needed a high number of neurones in the LSTM layers to respond better to the complexity of the problem and we chose to include 60 neurones in each of our 4 LSTM layers. You could try an architecture with even more neurones in each of the 4 (or more) LSTM layers.
+- Adding more neurones in the LSTM layers: we highlighted the fact that we needed a high number of neurones in the LSTM layers to respond better to the complexity of the problem and we chose to include 200 neurones in each of our 4 LSTM layers. You could try an architecture with even more neurones in each of the 4 (or more) LSTM layers.
 
 - Getting more training data
