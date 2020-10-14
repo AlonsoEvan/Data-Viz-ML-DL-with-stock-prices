@@ -20,7 +20,7 @@ Here's some examples :
 
 ![impxgboost](https://user-images.githubusercontent.com/49553009/96010973-b0192380-0e42-11eb-9e9d-7d8cbbe117e4.png)
 
-**Metrics
+**Metrics**
 
 > R² = 0.71
 
