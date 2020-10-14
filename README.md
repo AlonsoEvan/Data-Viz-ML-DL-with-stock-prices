@@ -15,6 +15,11 @@ Here's some examples :
 
 ![stock_price_MA_pred](https://user-images.githubusercontent.com/49553009/91452515-f27ca600-e87e-11ea-86a6-721023350390.png)
 
+
+
+
+![impxgboost](https://user-images.githubusercontent.com/49553009/96010973-b0192380-0e42-11eb-9e9d-7d8cbbe117e4.png)
+
 **Metrics
 
 > R² = 0.71
@@ -42,9 +47,6 @@ Here's some examples :
 ## Prediction with LSTM (stock_price_LSTM.py)
 
 ![lstm](https://user-images.githubusercontent.com/49553009/95762150-9db9b100-0cad-11eb-8265-01b5105ffe71.png)
-
-
-![impxgboost](https://user-images.githubusercontent.com/49553009/96010973-b0192380-0e42-11eb-9e9d-7d8cbbe117e4.png)
 
 
 **Metrics**
