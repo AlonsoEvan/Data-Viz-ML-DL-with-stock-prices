@@ -19,7 +19,8 @@ from warnings import simplefilter
 simplefilter(action='ignore', category=FutureWarning)
 simplefilter(action='ignore', category=DeprecationWarning)
 
-
+#d_parser = lambda x: pd.datetime.strptime(x, '%Y-%m-%d')
+#df = pd.read_csv('data/prices-split-adjusted.csv', parse_dates=['date'], date_parser=d_parser)
 
 df = pd.read_csv("data/prices-split-adjusted.csv")
 
@@ -36,6 +37,8 @@ df = df[df['symbol'] == stock]
 df=df[['date', price]]
 df=df.sort_values('date')
 df['date'] = df['date'].apply(pd.to_datetime, format="%Y-%m-%d")
+
+
 
 
 #moving average
@@ -105,6 +108,8 @@ eval_set = [(X_train, y_train), (X_valid, y_valid)]
 model = xgb.XGBRegressor(gamma = 0.01, learning_rate = 0.05, max_depth =  8, n_estimators = 400, random_state = 42, objective='reg:squarederror')
 model.fit(X_train, y_train, eval_set=eval_set, verbose=2)
 
+print(plot_importance(model))
+
 
 #if you want to plot feature importance, uncomment the two line of code below
 
@@ -152,4 +157,3 @@ ax2.set_ylabel(price)
 ax2.legend(loc = 'best')
 
 plt.show()
-
